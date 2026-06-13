@@ -1,0 +1,21 @@
+﻿# SINOSFT Core Math - 宇宙物理常数典 v1.0
+version: "2026.06.13-MathCore"
+
+environment:
+  gravity: 9.81
+  seawater_density: 1025.0
+  design_wave_height: 1.0
+  offshore_wave_height: 18.0
+  transmission_ratio_target: 0.055
+
+structural_limits:
+  max_total_width: 1188.0
+  allowable_stress_steel: 245.0
+  safety_factor_cable: 2.5
+  track_irregularity_tolerance: 0.005
+  track_angular_tolerance: 0.001
+
+manufacturing_constraints:
+  max_segment_length: 120.0
+  max_segment_weight: 85000.0
+  min_submerged_depth: 30.0

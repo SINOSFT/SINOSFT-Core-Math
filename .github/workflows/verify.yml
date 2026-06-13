@@ -1,0 +1,31 @@
+﻿name: SINOSFT Constitution Verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  l1_formal_verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install z3-solver pyyaml numpy scipy
+      - run: python spec/verify_static.py
+      - run: python spec/verify_robust_delay.py
+      - run: python spec/hydrodynamics/verify_transmission.py
+
+  l2_coupling_test:
+    needs: l1_formal_verification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install z3-solver pyyaml numpy scipy
+      - run: python coupling/wave_train_interaction.py
