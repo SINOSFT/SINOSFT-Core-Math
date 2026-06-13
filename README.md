@@ -25,9 +25,22 @@ cd SINOSFT-Core-Math
 pip install z3-solver pyyaml numpy scipy matplotlib
 python spec/verify_static.py
 python coupling/wave_train_interaction.py
+---
+
+修改后点击 **Commit changes** 提交。
 
 ---
 
+### 📊 SINOSFT 开源标准全部资产
+
+| 资产 | URL | 状态 |
+|:---|:---|:---|
+| SINOSFT 组织 | `github.com/SINOSFT` | ✅ |
+| 核心数学内核 | `github.com/SINOSFT/SINOSFT-Core-Math` | ✅ |
+| 开源总入口 | `github.com/SINOSHOP-OPEN/sinosft` | ✅ |
+| Gitee 国内镜像 | `gitee.com/sinoshop/sinoshop-os` | ✅ |
+
+**SINOSFT 悬浮隧道基础设施开源标准已全面上线。**
 ## 许可证
 
 MIT — 保留RWA技术自由
